@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ثبت نام</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/user.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="../../js/global.js"></script>
+</head>
+<body class="sign-page">
+  <div class="sign-cover"></div>
+  <div class="col-12 col-md-4 sign-form">
+    <h4>ثبت نام کاربر</h4>
+    <form>
+      <div class="form-group">
+        <label class="text-normal text-dark">نام کاربری</label>
+        <input type="text" class="form-control" id="username" placeholder="نام کاربری">
+      </div>
+      <div class="form-group">
+        <label class="text-normal text-dark">ایمیل</label>
+        <input type="text" id="email-box" class="form-control" placeholder="آدرس ایمیل">
+        <p id="error" class="error2">پست الکترونیکی شما معتبر نیست! </p>
+      </div>
+      <div class="form-group">
+        <label class="text-normal text-dark">نقش</label>
+        <select id="inputRef" class="form-control">
+          <option class="option" selected="selected">انتخاب کنید</option>
+          <option class="option">دانشجو</option>
+          <option class="option">کارمند/استاد</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="text-normal text-dark">رمز عبور</label>
+        <input type="password" id="password-box" class="form-control" placeholder="رمز عبور">
+        <p id="error" class="error3">گذرواژه باید شامل 8 رقم باشد! </p>
+        <p id="error" class="error4">گذرواژه باید شامل حداقل یک رقم باشد! </p>
+        <p id="error" class="error5">گذرواژه باید شامل حداقل یک حرف باشد! </p>
+      </div>
+      <div class="form-group">
+        <label class="text-normal text-dark">تکرار رمز عبور</label>
+        <input type="password" id="repassword-box" class="form-control" placeholder="رمز عبور">
+        <p id="error" class="error1">گذرواژه و تکرار آن با هم برابر نیستند! </p>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="inputRemember" name="inputRememberCheckbox">
+        <label for="inputRemember" class="checkbox-label">
+          <span>مرا به خاطر بسپار</span>
+        </label>
+      </div>
+      <button class="btn btn-primary" onclick="callCheckSignup()">ثبت نام</button>
+      <p id="error6">نام کاربری تکراری میباشد، دوباره امتحان کنید! </p>
+      <p id="error7">متاسفانه عملیات ثبتا نام شما با موفقیت انجام نشد، دوباره امتحان کنید! </p>
+    </form>
+  </div>
+  <script src="../../js/user.js"></script>
+  <script src="../../js/restCalls.js"></script>
+</body>
+</html>

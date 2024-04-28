@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>موارد ثبت شده</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/user.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="../../js/global.js"></script>
+  <script src="../../js/user.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <ul class="sidebar-menu is-night-mode-e">
+      <li>
+        <a href="../user/homepage.html">
+          <span class="item-icon">
+            <i class="fas fa-home"></i>
+          </span>
+          <span class="item-title">صفحه اصلی</span>
+        </a>
+      </li>
+      <li>
+        <a href="../student/case-submit.html">
+          <span class="item-icon">
+            <i class="fas fa-plus"></i>
+          </span>
+          <span class="item-title">ثبت مورد جدید</span>
+        </a>
+      </li>
+      <li>
+        <a href="../user/case-list.html">
+          <span class="item-icon">
+            <i class="fas fa-list-ul"></i>
+          </span>
+          <span class="item-title">مشاهده موارد</span>
+        </a>
+      </li>
+      <li>
+        <a href="../student/case-status.html">
+          <span class="item-icon">
+            <i class="far fa-clock"></i>
+          </span>
+          <span class="item-title">وضعیت موارد</span>
+        </a>
+      </li>
+      <li>
+        <a href="../actor/case-refer.html">
+          <span class="item-icon">
+            <i class="fas fa-reply"></i>
+          </span>
+          <span class="item-title">موارد ارجاع شده</span>
+        </a>
+      </li>
+      <li>
+        <a href="../admin/user-verify.html">
+          <span class="item-icon">
+            <i class="fas fa-user-check"></i>
+          </span>
+          <span class="item-title">تایید کاربران</span>
+        </a>
+      </li>
+      <li>
+        <a href="../admin/user-manage.html">
+          <span class="item-icon">
+            <i class="fas fa-users"></i>
+          </span>
+          <span class="item-title">مدیریت کاربران</span>
+        </a>
+      </li>
+      <li>
+        <a href="../admin/report.html">
+          <span class="item-icon">
+            <i class="fas fa-chart-bar"></i>
+          </span>
+          <span class="item-title">دریافت گزارش</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="page-overlay"></div>
+  <div class="page-container">
+    <header class="d-flex justify-content-between is-night-mode-a">
+      <ul class="nav-right">
+        <li class="sidebar-bars">
+          <a href="javascript:void(0)" id="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav-center">
+        <li>
+          <span>دوشنبه ۱۰ اردیبهشت، ۱۲:۵۲</span>
+        </li>
+      </ul>
+      <ul class="nav-left">
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+            <img src="../../images/avatar-default-man.png">
+            <span>علیرضا رستمی</span>
+          </a>
+          <ul class="dropdown-menu is-night-mode-c">
+            <li>
+              <a href="#">
+                <i class="fas fa-cog"></i>
+                <span>تنظیمات</span>
+              </a>
+            </li>
+            <li>
+              <a href="../user/profile.html">
+                <i class="fas fa-user"></i>
+                <span>پروفایل من</span>
+              </a>
+            </li>
+            <li class="separator is-night-mode-a"></li>
+            <li>
+              <a href="../user/signin.html">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>خروج</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="night-mode">
+          <label class="night-mode-input">
+            <input type="checkbox" id="night-mode-toggle">
+            <span class="night-mode-slider"></span>
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </label>
+        </li>
+      </ul>
+    </header>
+    <main class="is-night-mode-b">
+      <div class="row">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="main-card is-night-mode-a">
+              <div class="card-title">
+                <h4>موارد ثبت شده</h4>
+              </div>
+              <div class="card-content">
+                <div class="table-container">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th class="small-thead-row">ردیف</th>
+                        <th>موضوع</th>
+                        <th>عنوان</th>
+                        <th>شرح</th>
+                        <th>اقدام کننده</th>
+                        <th>تاریخ ثبت</th>
+                        <th class="small-thead-op">عملیات</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>۱</td>
+                        <td>موضوع ۱</td>
+                        <td>عنوان ۱</td>
+                        <td>شرح مورد ثبت شده</td>
+                        <td>شخص ۱</td>
+                        <td>۱۳۹۸/۰۳/۱۰</td>
+                        <td class="line-tdata">
+                          <div class="table-operation dropdown">
+                            <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+                            <ul class="dropdown-menu is-night-mode-c">
+                              <li>
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                  <span>مشاهده</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fas fa-edit"></i>
+                                  <span>ویرایش</span>
+                                </a>
+                              </li>
+                              <li class="separator is-night-mode-a"></li>
+                              <li>
+                                <a href="#">
+                                  <i class="fas fa-trash-alt"></i>
+                                  <span>حذف</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>۲</td>
+                        <td>موضوع ۲</td>
+                        <td>عنوان ۲</td>
+                        <td>شرح مورد ثبت شده</td>
+                        <td>شخص ۵</td>
+                        <td>۱۳۹۸/۰۲/۱۵</td>
+                        <td class="line-tdata">
+                          <div class="table-operation dropdown">
+                            <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+                            <ul class="dropdown-menu is-night-mode-c">
+                              <li>
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                  <span>مشاهده</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fas fa-edit"></i>
+                                  <span>ویرایش</span>
+                                </a>
+                              </li>
+                              <li class="separator is-night-mode-a"></li>
+                              <li>
+                                <a href="#">
+                                  <i class="fas fa-trash-alt"></i>
+                                  <span>حذف</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>۳</td>
+                        <td>موضوع ۳</td>
+                        <td>عنوان ۳</td>
+                        <td>شرح مورد ثبت شده</td>
+                        <td>شخص ۸</td>
+                        <td>۱۳۹۸/۰۱/۲۲</td>
+                        <td class="line-tdata">
+                          <div class="table-operation dropdown">
+                            <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+                            <ul class="dropdown-menu is-night-mode-c">
+                              <li>
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                  <span>مشاهده</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fas fa-edit"></i>
+                                  <span>ویرایش</span>
+                                </a>
+                              </li>
+                              <li class="separator is-night-mode-a"></li>
+                              <li>
+                                <a href="#">
+                                  <i class="fas fa-trash-alt"></i>
+                                  <span>حذف</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="is-night-mode-d">
+      <span>
+        کلیه حقوق برای طراح محفوظ است :)
+      </span>
+    </footer>
+  </div>
+</body>
+</html>

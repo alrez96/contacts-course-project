@@ -1,0 +1,182 @@
+main .main-card > .card-content > .table-container {
+  overflow-x: auto;
+}
+
+main .main-card > .card-content > .table-container > table {
+  color: #72777a;
+  font-size: 14px;
+  transition: all .2s ease-in-out;
+}
+
+main .main-card > .card-content > .table-container > table th.small-thead-row {
+  width: 8%;
+}
+
+main .main-card > .card-content > .table-container > table th.small-thead-op {
+  width: 5%;
+  text-align: center;
+}
+
+main .main-card > .card-content > .table-container > table td.line-tdata {
+  line-height: 1;
+}
+
+main .main-card > .card-content > .table-container > table th, main .main-card > .card-content > .table-container > table td {
+  transition: all .2s ease-in-out;
+}
+
+main .main-card > .card-content > .table-container > table .table-operation {
+  text-align: center;
+}
+
+main .main-card > .card-content > .table-container > table .table-operation > i {
+  cursor: pointer;
+  font-size: 18px;
+  transition: all .2s ease-in-out;
+}
+
+main .main-card > .card-content > .table-container > table .table-operation > i:hover {
+  color: #313435;
+}
+
+main .main-card > .card-content > .table-container > table .table-operation > i::after {
+  display: none;
+}
+
+main .main-card > .card-content > .table-container > table .table-operation > ul {
+  min-width: 120px;
+}
+
+main .main-card > .card-content > .table-container > table .table-operation > ul > li > a {
+  display: block;
+  direction: rtl;
+  text-align: right;
+  color: #72777a;
+  text-decoration: none;
+  line-height: 1.5;
+  min-height: auto;
+  font-size: 13px;
+  padding: 5px 15px;
+  transition: all .2s ease-in-out;
+}
+
+main .main-card > .card-content > .table-container > table .table-operation > ul > li > a:hover {
+  background-color: #f9fafb;
+  color: #313435;
+}
+
+main .main-card > .card-content > .table-container > table .table-operation > ul > li > a > i {
+  margin-left: 10px;
+}
+
+main .main-card > .card-content > .table-container > table .table-operation > ul > li.separator {
+  border-bottom: 1px solid #efefef;
+  height: 1px;
+  overflow: hidden;
+}
+
+main .main-card > .card-content > form img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
+main .main-card > .card-content > form .upload-profile {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+main .main-card > .card-content > form .upload-profile > .profile-image-overlay {
+  position: absolute;
+  top: 0;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+main .main-card > .card-content > form .upload-profile:hover > .profile-image-overlay {
+  opacity: 1;
+}
+
+main .main-card > .card-content > form .upload-profile > .profile-image-overlay > input {
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  outline: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+main .main-card > .card-content > form label {
+  font-size: 14px;
+}
+
+main .main-card > .card-content > form .form-control {
+  font-size: 15px;
+  transition: all .2s ease-in-out;
+}
+
+main .main-card > .card-content > form > .submit-btn {
+  color: #efefef;
+  font-size: 14px;
+  background-color: #2196f3;
+  border-color: #2196f3;
+  margin-top: 25px;
+  transition: all .2s ease-in-out;
+}
+
+main .main-card > .card-content > form > .delete-btn {
+  color: #efefef;
+  font-size: 14px;
+  background-color: #d8544b;
+  border-color: #d8544b;
+  margin-top: 25px;
+  transition: all .2s ease-in-out;
+}
+
+main .main-card > .card-content > form > .submit-btn:hover {
+  background-color: #136fb7;
+  border-color: #136fb7;
+}
+
+main .main-card > .card-content > form > .delete-btn:hover {
+  background-color: #f44336;
+  border-color: #f44336;
+}
+
+.night-mode-a > .card-content > .table-container > table th {
+  color: #efefef!important;
+  border-color: #5d646b!important;
+}
+
+.night-mode-a > .card-content > .table-container > table td {
+  border-color: #5d646b!important;
+}
+
+.night-mode-a > .card-content > .table-container > table .table-operation > i:hover {
+  color: #efefef!important;
+}
+
+.night-mode-a > .card-content > form .form-control {
+  color: #efefef!important;
+  border-color: #5d646b!important;
+  background-color: #181b24!important;
+}
+
+.night-mode-a > .card-content > form .form-control:disabled {
+  background-color: #212532!important;
+}
+
+.night-mode-a > .card-content > form > .submit-btn {
+  background-color: #136fb7!important;
+  border-color: #136fb7!important;
+}
+
+.night-mode-a > .card-content > form > .submit-btn:hover {
+  background-color: #2196f3!important;
+  border-color: #2196f3!important;
+}

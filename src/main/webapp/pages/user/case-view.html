@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>مشاهده مورد</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/user.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="../../js/global.js"></script>
+  <script src="../../js/user.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <ul class="sidebar-menu is-night-mode-e">
+      <li>
+        <a href="../user/homepage.html">
+          <span class="item-icon">
+            <i class="fas fa-home"></i>
+          </span>
+          <span class="item-title">صفحه اصلی</span>
+        </a>
+      </li>
+      <li>
+        <a href="../student/case-submit.html">
+          <span class="item-icon">
+            <i class="fas fa-plus"></i>
+          </span>
+          <span class="item-title">ثبت مورد جدید</span>
+        </a>
+      </li>
+      <li>
+        <a href="../user/case-list.html">
+          <span class="item-icon">
+            <i class="fas fa-list-ul"></i>
+          </span>
+          <span class="item-title">مشاهده موارد</span>
+        </a>
+      </li>
+      <li>
+        <a href="../student/case-status.html">
+          <span class="item-icon">
+            <i class="far fa-clock"></i>
+          </span>
+          <span class="item-title">وضعیت موارد</span>
+        </a>
+      </li>
+      <li>
+        <a href="../actor/case-refer.html">
+          <span class="item-icon">
+            <i class="fas fa-reply"></i>
+          </span>
+          <span class="item-title">موارد ارجاع شده</span>
+        </a>
+      </li>
+      <li>
+        <a href="../admin/user-verify.html">
+          <span class="item-icon">
+            <i class="fas fa-user-check"></i>
+          </span>
+          <span class="item-title">تایید کاربران</span>
+        </a>
+      </li>
+      <li>
+        <a href="../admin/user-manage.html">
+          <span class="item-icon">
+            <i class="fas fa-users"></i>
+          </span>
+          <span class="item-title">مدیریت کاربران</span>
+        </a>
+      </li>
+      <li>
+        <a href="../admin/report.html">
+          <span class="item-icon">
+            <i class="fas fa-chart-bar"></i>
+          </span>
+          <span class="item-title">دریافت گزارش</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="page-overlay"></div>
+  <div class="page-container">
+    <header class="d-flex justify-content-between is-night-mode-a">
+      <ul class="nav-right">
+        <li class="sidebar-bars">
+          <a href="javascript:void(0)" id="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav-center">
+        <li>
+          <span>دوشنبه ۱۰ اردیبهشت، ۱۲:۵۲</span>
+        </li>
+      </ul>
+      <ul class="nav-left">
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+            <img src="../../images/avatar-default-man.png">
+            <span>علیرضا رستمی</span>
+          </a>
+          <ul class="dropdown-menu is-night-mode-c">
+            <li>
+              <a href="#">
+                <i class="fas fa-cog"></i>
+                <span>تنظیمات</span>
+              </a>
+            </li>
+            <li>
+              <a href="../user/profile.html">
+                <i class="fas fa-user"></i>
+                <span>پروفایل من</span>
+              </a>
+            </li>
+            <li class="separator is-night-mode-a"></li>
+            <li>
+              <a href="../user/signin.html">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>خروج</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="night-mode">
+          <label class="night-mode-input">
+            <input type="checkbox" id="night-mode-toggle">
+            <span class="night-mode-slider"></span>
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </label>
+        </li>
+      </ul>
+    </header>
+    <main class="is-night-mode-b">
+      <div class="row">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <ul class="nav nav-tabs tab-case is-night-mode-a">
+              <li><a class="active" data-toggle="tab" href="#view">مشاهده</a></li>
+              <li><a data-toggle="tab" href="#act">اقدام</a></li>
+              <li><a data-toggle="tab" href="#history">تاریخچه</a></li>
+            </ul>
+            <div class="main-card is-night-mode-a">
+              <div class="tab-content">
+                <div id="view" class="tab-pane fade in active show">
+                  <div class="card-title">
+                    <h6>مشاهده مورد ثبت شده</h6>
+                  </div>
+                  <div class="card-content">
+                    <form>
+                      <div class="form-group row">
+                        <label for="inputIssue" class="col-sm-2 col-form-label">موضوع</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputIssue" placeholder="موضوع مورد" value="پیشنهاد" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputTitle" class="col-sm-2 col-form-label">عنوان</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputTitle" placeholder="عنوان مورد" value="نصب کولر گازی در دستشویی" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputDesc" class="col-sm-2 col-form-label">شرح</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" rows="5" name="inputDesc" placeholder="شرح مورد را وارد کنید" disabled>لطفا این کار رو بکنید</textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputRef" class="col-sm-2 col-form-label">اقدام کننده</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" name="inputRef" placeholder="شخص مقدم" value="آقای فلانی" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputStatus" class="col-sm-2 col-form-label">وضعیت</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" name="inputStatus" placeholder="وضعیت مورد" value="باز" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputAtt" class="col-sm-2 col-form-label">پیوست</label>
+                        <div class="col-sm-6">
+                          <a href="javascript:void(0)" class="btn-attachment">ندارد</a>
+                          <input type="file" name="inputAtt" title="فایل را انتخاب کنید" disabled>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div id="act" class="tab-pane fade">
+                  <div class="card-title">
+                    <h6>اقدام روی مورد</h6>
+                  </div>
+                  <div class="card-content">
+                    <form>
+                      <div class="form-group row">
+                        <label for="inputOp" class="col-sm-2 col-form-label">عملیات</label>
+                        <div class="col-sm-10">
+                          <select id="inputOP" class="form-control">
+                            <option selected="selected">انتخاب کنید</option>
+                            <option>ارجاع</option>
+                            <option>تغییر وضعیت</option>
+                            <option>ثبت یادداشت</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputNote" class="col-sm-2 col-form-label">یادداشت</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" rows="5" id="inputNote" placeholder="برای این تغییر یادداشت وارد کنید" disabled></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputRef" class="col-sm-2 col-form-label">ارجاع به</label>
+                        <div class="col-sm-10">
+                          <select id="inputRef" class="form-control" disabled>
+                            <option selected="selected">انتخاب کنید</option>
+                            <option>شخص ۱</option>
+                            <option>شخص ۲</option>
+                            <option>شخص ۳</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputStatusCh" class="col-sm-2 col-form-label">وضعیت</label>
+                        <div class="col-sm-10">
+                          <select id="inputStatusCh" class="form-control" disabled>
+                            <option selected="selected">انتخاب کنید</option>
+                            <option>باز</option>
+                            <option>بسته</option>
+                            <option>نیمه باز</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn submit-btn">ثبت</button>
+                    </form>
+                  </div>
+                </div>
+                <div id="history" class="tab-pane fade">
+                  <div class="card-title">
+                    <h6>تاریخچه تغییرات</h6>
+                  </div>
+                  <div class="card-content">
+                    <form>
+                      <div class="form-group row form-group-ch">
+                        <label for="inputDate" class="col-sm-2 col-form-label">تاریخ</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputDate" value="دوشنبه ۱۸ اردیبهشت، ۱۲:۵۲" disabled>
+                        </div>
+                        <label for="inputChange" class="col-sm-2 col-form-label">تغییر</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputChange" value="تغییر وضعیت از باز به بسته" disabled>
+                        </div>
+                        <label for="inputActor" class="col-sm-2 col-form-label">اقدام کننده</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputActor" value="شخص شماره فلان" disabled>
+                        </div>
+                        <label for="inputNoteS" class="col-sm-2 col-form-label">یادداشت</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" rows="5" name="inputNoteS" disabled>این اقدام انجام شد</textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row form-group-ch">
+                        <label for="inputDate" class="col-sm-2 col-form-label">تاریخ</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputDate" value="دوشنبه ۱۸ اردیبهشت، ۱۱:۵۲" disabled>
+                        </div>
+                        <label for="inputChange" class="col-sm-2 col-form-label">تغییر</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputChange" value="تغییر وضعیت از باز به بسته" disabled>
+                        </div>
+                        <label for="inputActor" class="col-sm-2 col-form-label">اقدام کننده</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputActor" value="شخص شماره فلان" disabled>
+                        </div>
+                        <label for="inputNoteS" class="col-sm-2 col-form-label">یادداشت</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" rows="5" name="inputNoteS" disabled>این اقدام انجام شد</textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row form-group-ch">
+                        <label for="inputDate" class="col-sm-2 col-form-label">تاریخ</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputDate" value="دوشنبه ۱۸ اردیبهشت، ۱۰:۵۲" disabled>
+                        </div>
+                        <label for="inputChange" class="col-sm-2 col-form-label">تغییر</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputChange" value="تغییر وضعیت از باز به بسته" disabled>
+                        </div>
+                        <label for="inputActor" class="col-sm-2 col-form-label">اقدام کننده</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="inputActor" value="شخص شماره فلان" disabled>
+                        </div>
+                        <label for="inputNoteS" class="col-sm-2 col-form-label">یادداشت</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" rows="5" name="inputNoteS" disabled>این اقدام انجام شد</textarea>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="is-night-mode-d">
+      <span>
+        کلیه حقوق برای طراح محفوظ است :)
+      </span>
+    </footer>
+  </div>
+</body>
+</html>
